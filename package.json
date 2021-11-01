@@ -1,0 +1,29 @@
+{
+  "name": "swaggerwithnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afrosiyob/swaggerwithnode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afrosiyob/swaggerwithnode/issues"
+  },
+  "homepage": "https://github.com/Afrosiyob/swaggerwithnode#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
