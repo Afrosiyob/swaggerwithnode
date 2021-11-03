@@ -11,16 +11,15 @@ import {
 export default function (app: Express) {
   app.get("/healthcheck", (req: Request, res: Response) => res.sendStatus(200));
 
-  // Registration
+  //TODO: Registration
   app.post("/api/users", validateRequest(createUserSchema), createUserHandler);
 
-  // Login
-
+  //TODO: Login
   app.post(
     "/api/sessions",
     validateRequest(createUserSessionSchema),
     createUserSessionHandler
   );
 
-  // Logout
+  //TODO: Logout
 }
