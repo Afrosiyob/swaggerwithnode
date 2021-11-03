@@ -16,3 +16,15 @@ export const createUserSchema = object({
       .required("email is required"),
   }),
 });
+
+export const createUserSessionSchema = object({
+  body: object({
+    password: string()
+      .required("password is required")
+      .min(6, "password is too short - should be 6 chars minimum")
+      .matches(/^[a-zA-Z0-9_.-]*$/, "Password can only contain latin letters"),
+    email: string()
+      .email("must be a valid email")
+      .required("email is required"),
+  }),
+});
