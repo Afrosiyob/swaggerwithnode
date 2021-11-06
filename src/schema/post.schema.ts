@@ -7,13 +7,22 @@ const payload = {
   }),
 };
 
+const params = {
+  params: object({
+    postId: string().required("postId is required"),
+  }),
+}
+
 export const createPostSchema = object({
   ...payload,
 });
 
+
 export const updatePostSchema = object({
-  params: object({
-    postId: string().required("postId is required"),
-  }),
+  ...params,
   ...payload,
 });
+
+export const deletePostShema = object({
+  ...params
+})

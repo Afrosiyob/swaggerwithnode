@@ -1,4 +1,5 @@
 import { Express, Request, Response } from "express";
+import { createPostHandler, getPostHandler, getPostsHandler, updatePostHandler } from "./controller/post.controller";
 import {
   createUserSessionHandler,
   getUserSessionsHandler,
