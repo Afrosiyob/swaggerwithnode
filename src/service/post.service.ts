@@ -8,7 +8,7 @@ export async function createPost(input : DocumentDefinition<PostDocument>) {
         return Post.create(input)
     } catch (error) {
         log.error(error)
-        throw new Error((error as Error).message)
+        throw new Error((error as Error).message)   
     }
 }
 
@@ -17,7 +17,6 @@ export async function findPost(
     options: QueryOptions = {lean :true}
 ) {
     try {
-        
         return Post.findOne(query, {}, options)
     } catch (error) {
         log.error(error)
@@ -30,7 +29,6 @@ export async function findAndUpdatePost(
     update: UpdateQuery<PostDocument>,
     options: QueryOptions
 ) {
-
     try {
         return Post.findOneAndUpdate(query, update, options)
     } catch (error) {
@@ -38,4 +36,8 @@ export async function findAndUpdatePost(
         throw new Error((error as Error).message)
     }
 
+}
+
+export async function findPosts(query: FilterQuery<PostDocument>) {
+    return Post.find(query).lean()
 }
