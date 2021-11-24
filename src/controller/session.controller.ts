@@ -27,7 +27,7 @@ export async function createUserSessionHandler(req: Request, res: Response) {
     expiresIn: config.get("refreshTokenTtl"), // ? 1 year
   });
   //TODO: send refresh & access token back
-  return res.send({ accessToken, refreshToken });
+  return res.send({ accessToken, refreshToken, user:"user data default" });
 }
 
 export async function invalidateUserSessionHandler(
