@@ -37,9 +37,9 @@ export async function updatePostHandler(req: Request, res: Response) {
     const post = findPost({ postId })
     
 
-    if (String(post.user) !== userId ) {
-        return res.sendStatus(401)
-    }
+    // if (String(post.user) !== userId ) {
+    //     return res.sendStatus(401)
+    // }
     
     if (!post) {
         return res.sendStatus(404)
